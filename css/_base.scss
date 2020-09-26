@@ -1,0 +1,55 @@
+$sm: 576px;
+$md: 768px;
+$xl: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin u-sm {
+    @media (min-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin u-md {
+    @media (min-width: #{$md}) {@content;}
+}
+
+@mixin u-lg {
+    @media (min-width: #{$lg}) {@content;}
+}
+
+@mixin u-xl {
+    @media (min-width: #{$xl}) {@content;}
+}
+
+@mixin u-xxl {
+    @media (min-width: #{$xxl}) {@content;}
+}
+
+@for $i from 2 through 10 {
+    .u-Above-#{$i} {
+        > * {
+            margin-top: #{$i*8}px;
+        }
+    }
+    .u-Above-p#{$i} {
+        > * {
+            padding-top: #{$i*8}px;
+        }
+    }
+    .u-Below-#{$i} {
+        > * {
+            margin-bottom: #{$i*8}px;
+        }
+    }
+    .u-Below-p#{$i} {
+        > * {
+            margin-bottom: #{$i*8}px;
+        }
+    }
+}
+@for $i from 2 through 8 {
+    .f-txt-#{$i} {
+        font-size: #{$i*8}px;
+    }
+}

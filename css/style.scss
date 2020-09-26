@@ -1,0 +1,58 @@
+@import "./_base.scss";
+
+$white: #fff;
+$black: #333;
+$white2: #f3f3f3;
+
+
+//z-index設定
+.c-Header {
+    z-index: 1;
+}
+.m-Main, .c-Footer  {
+    z-index: 0;
+}
+
+.c-Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.m-Main {
+    margin-top: 60px;
+}
+
+.m-Main__inner {
+    > * {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    > *:nth-child(odd) {
+        background-color: $black;
+        color:$white2;
+    }
+    > *:nth-child(even) {
+        background-color: $white2;
+    }
+}
+.c-Hero {
+    height: 600px;
+    background-image: url(/image/hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+
+    .c-Hero__inner {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        font-weight: normal;
+        text-align: center;
+        transform: translate(0, -50%);
+    }
+}
